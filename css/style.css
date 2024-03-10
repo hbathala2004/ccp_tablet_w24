@@ -1,0 +1,258 @@
+nav {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: right;
+    font-size: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    border: 1px solid #333;
+    padding: 10px 15px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: yellow;
+    text-decoration: none;
+}
+
+body {
+    display: grid;
+    background-color: rgb(241, 191, 219); 
+    color: #1435f1;
+    font-family: 'Serif';
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    color: #1435f1;
+}
+
+.thumbnail {
+    display: grid;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+h1 {
+    color: #1435f1;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-size: 55px;
+}
+
+h2 {
+    font-size: medium;
+    font-family: 'Times New Roman';
+    color: #1435f1;
+}
+
+h3 {
+    font-size: medium;
+    font-family: 'Times New Roman';
+    color: #1435f1;
+}
+
+#skip {
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    font-family: 'Times New Roman';
+}
+
+p {
+    line-height: 190%;
+}
+
+img {
+    border-style: dashed;
+    border-color: #1435f1;
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+}
+
+.recipes img {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.recipes img:hover {
+    transform: scale(1.4);
+}
+
+li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.skip:focus {
+    left: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .toggle-checkbox {
+        display: none;
+    }
+
+    .toggle-label {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #faec2e;
+        border-radius: 17px;
+        cursor: pointer;
+    }
+
+    .toggle-checkbox:checked + .toggle-label {
+        background-color: #da12d6;
+    }
+
+    .toggle-label::before {
+        content: '';
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: rgb(13, 50, 183);
+        transform: translateX(4px);
+    }
+
+    .toggle-checkbox:checked + .toggle-label::before {
+        transform: translateX(30px);
+    }
+
+    .dark-mode {
+        background-color: lightblue;
+        color: #fff;
+    }
+
+    .Travel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .Pets {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 12px;
+    }
+    
+
+    .travel-pics img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pet-pics img {
+        width: 30%;
+        max-height: 70%;
+    }
+
+    .recipes-pics img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        margin: auto;
+    }
+
+    .scroll-button {
+        display: block;
+        margin: 20px;
+        padding: 20px;
+        background-color: #1435f1;
+        color: #1435f1;
+        border: none;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: lighter;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #output {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* add lightbox */
+    .lightbox {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1435f1; \
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lightbox-content {
+        max-width: 80%;
+        max-height: 80%;
+        position: relative;
+    }
+
+    .lightbox-content img {
+        max-width: 80%;
+        max-height: 80%;
+        border: 4px solid rgb(232, 18, 139);
+        border-radius: 20px;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: #fff;
+    }
+    a.skip {
+        position: absolute;
+        left: -1000px;
+    }
+    
+    a.skip:focus {
+           left: 100px;
+     }
+     
+    }
+}
