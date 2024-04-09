@@ -1,13 +1,13 @@
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const mainBtn = document.getElementById("home");
-    const text = document.getElementById("text");
-
-    mainBtn.addEventListener("click", function() {
-        const currentFontSize = parseFloat(window.getComputedStyle(text).fontSize);
-        const newFontSize = currentFontSize + 2; // Increase font size by 2 pixels
-
-        text.style.fontSize = newFontSize + "2px";
-    });
+document.querySelector("#vintage").addEventListener("click", function() {
+    var video = document.querySelector("Home");
+    video.classList.add("oldSchool");
+    console.log("Home screen is in old school mode");
 });
+
+document.querySelector("#vintage").addEventListener("click", function() {
+    var video = document.querySelector("Pets");
+    video.classList.add("oldSchool");
+    console.log("Pets screen is in old school mode");
+});
+
